@@ -1,6 +1,8 @@
 import React from 'react';​
 
 import { Link, NavLink } from 'react-router-dom';​
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {fontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 ​
 const NavBar = () => {​
@@ -14,6 +16,7 @@ const NavBar = () => {​
                 <a className="brand-logo left">Netflix</a>​
 
                 <ul className="right">​
+    
 
                     <li><NavLink to="/">Home</NavLink></li>​
 
@@ -26,6 +29,12 @@ const NavBar = () => {​
                     <li><NavLink to="/mylist">My List</NavLink></li>​
 
                 </ul>​
+                <ul>
+                    <li>
+                        <link to=""><fontAwesomeIcon icon={faSearch}/></link>
+                    </li>
+
+                </ul>
 
             </div>​
 
