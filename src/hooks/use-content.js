@@ -1,8 +1,9 @@
-import { useEffect, uSVGFEDistantLightElement, useContext } from 'react';
-import { firebaseContext } from '../context/firebase';
-export default function useContext(target) {
+import { useEffect, useState, useContext } from 'react';
+import { FirebaseContext } from '../context/firebase';
+
+export default function useContent(target) {
     const [content, setContent] = useState([]);
-    const { firebase } = usetContent(firebaseContext);
+    const { firebase } = useContext(FirebaseContext);
     
 
     useEffect(() => {
@@ -22,5 +23,5 @@ export default function useContext(target) {
                 console.log(error.message);
             });
     }, []);
-    return { [taget]: content };
+    return { [target]: content };
 }

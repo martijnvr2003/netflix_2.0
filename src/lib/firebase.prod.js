@@ -1,6 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import { seedDatabase } from '../seed';
 
 const config= {
     apiKey: "AIzaSyBtqJTHuXE1iVApbWUUsh67TMQMuz8lkSU",
@@ -10,9 +11,12 @@ const config= {
     messagingSenderId: "309237176607",
     appId: "1:309237176607:web:1f285fffa7e9801629782a",
     measurementId: "G-0Z2FG5BPZL"
-  };
+};
+
 const firebase = Firebase.initializeApp(config);
 
 
+
+seedDatabase(firebase);
 
 export { firebase };

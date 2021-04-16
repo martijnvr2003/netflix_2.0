@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContent } from '../hooks'; 
-import useContext from '../hooks/use-content';
+// import useContent from '../hooks/use-content';
 
 export default function Browse() {
-    const { series } = useContext('series');
-    const { films } = useContext('films');
+    const { series } = useContent('series');
+    const { films } = useContent('films');
 
     
     return <p>Hello from the browse!</p>;
