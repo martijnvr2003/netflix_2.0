@@ -20,5 +20,6 @@ export default function useAuthListener() {
 
         return () => listner();
     }, []);
+
     return { user };
 }
