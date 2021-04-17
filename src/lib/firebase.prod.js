@@ -15,6 +15,7 @@ const config= {
 
 const firebase = Firebase.initializeApp(config);
 
+// console.log("seed");
 // seedDatabase(firebase);
 
 export { firebase };
