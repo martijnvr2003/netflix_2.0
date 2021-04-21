@@ -8,20 +8,21 @@ export default function useContent(target) {
 
     useEffect(() => {
         firebase
-            .firestore()
-            .collection(target)
-            .get()
-            .then((snapshot) => {
-                const allContent = snapshot.docs.map((contentObj) => ({
-                    ...contentObj.data(),
-                    docId: contentObj.id,
-                }));
-
-               setContent(allContent);
-            })
-            .catch((error) => {
-                console.log(error.message);
-            });
-    }, []);
-    return { [target]: content };
-}
+          .firestore()
+          .collection(target)
+          .get()
+          .then((snapshot) => {
+            const allContent = snapshot.docs.map((contentObj) => ({
+              ...contentObj.data(),
+              docId: contentObj.id,
+            }));
+    
+            setContent(allContent);
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      }, []);
+    
+      return { [target]: content };
+    }
